@@ -35,7 +35,7 @@ function computerPlay() {
 }
 
 CPUmove = computerPlay();
-console.log(CPUmove);
+// console.log(CPUmove);
 
 //Plays a round of RPS
 function rpsRound(playerSelection, computerSelection){
@@ -67,5 +67,15 @@ function rpsRound(playerSelection, computerSelection){
 	}
 }
 
-//testing
-rpsRound("SCISSORS", computerPlay());
+//Main game function
+function game(){
+	let userInput;
+	for(let i = 0; i < 5; i++){
+		userInput = prompt("ROCK, PAPER, SCISSORS, GO!");
+		rpsRound(userInput, computerPlay());
+	}
+
+	console.log("GAME OVER!")
+}
+
+game();
