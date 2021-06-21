@@ -36,3 +36,36 @@ function computerPlay() {
 
 CPUmove = computerPlay();
 console.log(CPUmove);
+
+//Plays a round of RPS
+function rpsRound(playerSelection, computerSelection){
+	if(playerSelection.toUpperCase() === computerSelection){  
+		console.log("Draw!"); 
+	}
+ 
+	else if(playerSelection.toUpperCase() === "ROCK" 
+	  && computerSelection === "PAPER") {  
+		console.log("You lose! " + computerSelection
+		 + " beats " + playerSelection + "!" );
+	}    
+    
+	else if(playerSelection.toUpperCase() === "PAPER"
+	  && computerSelection === "SCISSORS"){   
+		console.log("You lose! " + computerSelection
+		 + " beats " + playerSelection + "!" );
+	} 
+
+	else if(playerSelection.toUpperCase() === "SCISSORS"
+	   && computerSelection === "ROCK"){
+		console.log("You lose! " + computerSelection
+		 + " beats " + playerSelection + "!" );
+	}
+
+	else{
+		console.log("You win! " + playerSelection
+		  + " beats " + computerSelection + "!");
+	}
+}
+
+//testing
+rpsRound("SCISSORS", computerPlay());
