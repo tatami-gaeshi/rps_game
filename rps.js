@@ -20,20 +20,19 @@ let CPUmove;
 function getRandNum(min, max){
 	return Math.floor(Math.random()*max) + min;
 }
-
 //CPU chooses a move based on outcome of RNG
-switch(getRandNum(0, 3)){
-	case 0:
-		CPUmove = ROCK;
-		break;
-	case 1:
-		CPUmove = PAPER;
-		break;
-	case 2:
-		CPUmove = SCISSORS;
-		break;
-	default:
-		console.log("Something went wrong D:");
+function computerPlay() {
+	switch(getRandNum(0, 3)){
+		case 0:
+			return ROCK;
+		case 1:
+			return PAPER;
+		case 2:
+			return SCISSORS;
+		default:
+			console.log("Something went wrong D:");
+	}
 }
 
+CPUmove = computerPlay();
 console.log(CPUmove);
